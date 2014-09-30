@@ -1,0 +1,13 @@
+# Site settings
+title: dancmj
+email: hello@dancmj.net
+description: > # this means to ignore newlines until "baseurl:"
+  A dev blog about my projects, ideas and whereabouts.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://dancmj.net" # the base hostname & protocol for your site
+twitter_username: dan_cmj
+github_username:  dancmj
+
+# Build settings
+markdown: kramdown
+ 
