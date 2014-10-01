@@ -3,38 +3,38 @@ var game = new Phaser.Game(400,490,Phaser.AUTO,'gameDiv');
 
 //Creates the "main state" of the game. It contains the game.
 var mainState = {
-	preload: function(){
-		//This function will be executed when everything starts.
-		//Load everything here. Assets & stuff.
+    preload: function(){
+        //This function will be executed when everything starts.
+        //Load everything here. Assets & stuff.
 
-		//Change the background color of the viewport.
-		game.stage.backgroundColor='#71c5cf';
+        //Change the background color of the viewport.
+        game.stage.backgroundColor='#71c5cf';
 
-		//Load the bird's sprite
-    	game.load.image('bird', '/assets/sgames/fbird/assets/bird.png');
+        //Load the bird's sprite
+        game.load.image('bird', '/assets/sgames/fbird/assets/bird.png');
         game.load.image('pipe', '/assets/sgames/fbird/assets/pipe.png');  
-	},
-	create: function(){
-		//This is called after the preload,
-		//It sets up the game, displays sprites & more.
+    },
+    create: function(){
+        //This is called after the preload,
+        //It sets up the game, displays sprites & more.
         
         
         this.score = 0; //Soring system! 
         this.labelScore = game.add.text(20, 20, "0", { font: "30px Arial", fill: "#ffffff" });  
 
-		//This sets up the physics system. Pretty simple, huh?
+        //This sets up the physics system. Pretty simple, huh?
         game.physics.startSystem(Phaser.Physics.ARCADE);
 
-		//Display the bird on the screen.
-		this.bird = this.game.add.sprite(100,245,'bird');
+        //Display the bird on the screen.
+        this.bird = this.game.add.sprite(100,245,'bird');
 
-		//Add gravity to the birdie.
-		game.physics.arcade.enable(this.bird);
+        //Add gravity to the birdie.
+        game.physics.arcade.enable(this.bird);
         this.bird.body.gravity.y = 1300; //Default 1000
 
-		//Call the 'jump' function when the SPACE key is hit.
-		var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-		spaceKey.onDown.add(this.jump,this);
+        //Call the 'jump' function when the SPACE key is hit.
+        var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+        spaceKey.onDown.add(this.jump,this);
         
         //The group will contain 20 pipes that we will be able to use as we want.
         //So its easier to use a group for the pipes.
@@ -44,32 +44,32 @@ var mainState = {
         this.timer = game.time.events.loop(1500, this.addRowOfPipes, this); //Adds the pipes into the game.
 
 
-	},	
-	update: function(){
-		//THis function is called 60 times per seconds.
-		//Game logic goes here.
+    },  
+    update: function(){
+        //THis function is called 60 times per seconds.
+        //Game logic goes here.
         
         //Kill Frank the Bird if it collides with a pipe.
         game.physics.arcade.overlap(this.bird, this.pipes, this.restartGame, null, this);  
         
-		//If the bird is out of the viewport:
-		if(!this.bird.inWorld){
-			this.restartGame();
-		}
-	},
+        //If the bird is out of the viewport:
+        if(!this.bird.inWorld){
+            this.restartGame();
+        }
+    },
 
 
-	// Make the bird jump 
-	jump: function() {  
-    	// Add a vertical velocity to the bird
-    	this.bird.body.velocity.y = -270; // DEfault -350
-	},
+    // Make the bird jump 
+    jump: function() {  
+        // Add a vertical velocity to the bird
+        this.bird.body.velocity.y = -270; // DEfault -350
+    },
 
-	// Restart the game
-	restartGame: function() {  
-	    // Start the 'main' state, which restarts the game
-	    game.state.start('main');
-	},
+    // Restart the game
+    restartGame: function() {  
+        // Start the 'main' state, which restarts the game
+        game.state.start('main');
+    },
     
     //By default, all the pipes contained in the group are dead and not displayed. 
     //So it picks up a dead pipe, display it, and make sure to automatically kill it when it's no longer visible.
@@ -98,9 +98,11 @@ var mainState = {
         var hole = Math.floor(Math.random() * 5) + 1;
         
         // Add the 6 pipes 
-        for (var i = 0; i < 8; i++)
-            if (i != hole && i != hole + 1) 
-                this.addOnePipe(400, i * 60 + 10);   
+        for (var i = 0; i < 8; i++){
+            if (i != hole && i != hole + 1) {
+                this.addOnePipe(400, i * 60 + 10);  
+            }
+        }
     },
 };
 
