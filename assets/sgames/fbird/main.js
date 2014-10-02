@@ -1,3 +1,4 @@
+//Main part 1
 //This initializes phaser on a 400x490px screen.
 var game = new Phaser.Game(400,490,Phaser.AUTO,'gameDiv');
 
