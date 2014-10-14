@@ -16,7 +16,6 @@ var loadState = {
         
         game.load.spritesheet('ghost1', addressPrepend +'/assets/ghost1.png',20,20);
         game.load.spritesheet('skull', addressPrepend +'/assets/skull.png',20,20);
-        game.load.image('background', addressPrepend +'/assets/blak.png');
         game.load.image('pixel', addressPrepend +'/assets/pixel.png');
         
         game.load.image('jumpButton', addressPrepend +'/assets/jumpButton.png');

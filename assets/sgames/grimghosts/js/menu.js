@@ -34,9 +34,7 @@ var menuState = {
         startLabel.anchor.setTo(0.5, 0.5);
 
         nameLabel.smoothed=false;
-        //game.add.tween(nameLabel.font).to('36px "Press Start 2P"', 1, Phaser.Easing.Linear.None, true, 1000, 1000, true).start();
-//        game.add.tween(startLabel).to({angle: -2}, 500).to({angle: 2}, 500).loop().start();
-//        game.add.tween(startLabel).to({alpha: 0}, 1000).to({alpha: 1}, 1).loop().start();
+        
         game.add.tween(startLabel).to({alpha:0}, 1, Phaser.Easing.Linear.None, true, 1000, 1000, true).start();
         
         this.muteButton = game.add.button(20,20,'mute',this.toggleSound, this);
@@ -45,7 +43,7 @@ var menuState = {
         
         var spaceBar = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         spaceBar.onDown.addOnce(this.start,this);
-        //game.input.onDown.addOnce(this.start, this);
+        game.input.onDown.addOnce(this.start, this);
 
     },
     

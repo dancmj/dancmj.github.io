@@ -93,7 +93,7 @@ var playState = {
 			this.player.body.velocity.x = -200;
             this.player.animations.play('left');
 		}
-		else if (this.cursor.right.isDown || this.wasd.right.isDown) {
+		else if (this.cursor.right.isDown || this.wasd.right.isDown  || this.moveRight) {
 			this.player.body.velocity.x = 200;
             this.player.animations.play('right');
 		}
@@ -102,7 +102,7 @@ var playState = {
             this.player.animations.play('idle');
 		}
     
-		if (this.cursor.up.isDown || this.wasd.up.isDown || this.wasd.spaceBar.isDown || this.moveRight) {
+		if (this.cursor.up.isDown || this.wasd.up.isDown || this.wasd.spaceBar.isDown) {
             this.jumpPlayer();
 		}      
 	},
@@ -157,7 +157,7 @@ var playState = {
 		this.map = game.add.tilemap('map');
         this.map.addTilesetImage('tileset');
         this.layer = this.map.createLayer('Tile Layer 1');
-        //this.layer.resizeWorld();
+        this.layer.resizeWorld();
         this.map.setCollision(1);
 	},
     
@@ -199,8 +199,12 @@ var playState = {
         this.jumpButton = game.add.sprite(350,247,'jumpButton');
         this.jumpButton.inputEnabled = true;
         this.jumpButton.events.onInputDown.add(this.jumpPlayer,this);
+        this.jumpButton.events.onInputOver.add(this.jumpPlayer,this);
         this.jumpButton.alpha = 0.5;
         
+        this.moveLeft = false;
+        this.moveRight = false;
+
         this.leftButton = game.add.sprite(50,247,'leftButton');
         this.leftButton.inputEnabled = true;
         this.leftButton.events.onInputOver.add(function(){this.moveLeft=true;},this);
