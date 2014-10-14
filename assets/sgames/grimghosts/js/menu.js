@@ -29,21 +29,22 @@ var menuState = {
             var startText = 'press SPACEBAR to start';
         }else{
             var startText = 'Touch to start!';
+            game.input.onDown.addOnce(this.start, this);
         }
         var startLabel = game.add.text(game.world.centerX, game.world.height-80, startText,{ font: '16px "Press Start 2P"', fill: '#ffffff' });
         startLabel.anchor.setTo(0.5, 0.5);
 
         nameLabel.smoothed=false;
-        
         game.add.tween(startLabel).to({alpha:0}, 1, Phaser.Easing.Linear.None, true, 1000, 1000, true).start();
         
         this.muteButton = game.add.button(20,20,'mute',this.toggleSound, this);
-        if(game.sound.mute){this.muteButton.frame=1;};
         this.muteButton.input.useHandCursor = true;
+        if(game.sound.mute){
+            this.muteButton.frame=1;
+        };
         
         var spaceBar = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         spaceBar.onDown.addOnce(this.start,this);
-        game.input.onDown.addOnce(this.start, this);
 
     },
     

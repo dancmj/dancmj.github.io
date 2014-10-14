@@ -1,6 +1,7 @@
 var loadState = {
     preload: function(){
-       var addressPrepend = '/assets/sgames/grimghosts';
+        var addressPrepend = '/assets/sgames/grimghosts';
+        //var addressPrepend = '.';
         var loadingLabel = game.add.text(game.world.centerX,150,'Loading...',{font: '32px "Press Start 2P"', fill: '#ffffff'});
         loadingLabel.anchor.setTo(0.5,0.5);
                                          
@@ -25,9 +26,12 @@ var loadState = {
         game.load.audio('jump', [ addressPrepend +'/assets/jump.ogg', addressPrepend +'./assets/jump.mp3']);
         game.load.audio('coin', [ addressPrepend +'/assets/coin.ogg', addressPrepend +'./assets/coin.mp3']);
         game.load.audio('dead', [ addressPrepend +'/assets/dead.ogg', addressPrepend +'./assets/dead.mp3']);
+        
     },
     
     create: function(){
         game.state.start('menu');
     },
+    
+    
 }

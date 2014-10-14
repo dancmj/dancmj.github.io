@@ -3,6 +3,21 @@ var playState = {
         
         this.cursor = game.input.keyboard.createCursorKeys();
         
+        game.input.keyboard.addKeyCapture([Phaser.Keyboard.UP,Phaser.Keyboard.DOWN,Phaser.Keyboard.LEFT,Phaser.Keyboard.RIGHT,Phaser.Keyboard.SPACEBAR]);
+
+        this.wasd = {
+            up: game.input.keyboard.addKey(Phaser.Keyboard.W),
+            left: game.input.keyboard.addKey(Phaser.Keyboard.A),
+            right:game.input.keyboard.addKey(Phaser.Keyboard.D),
+            spaceBar:game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR),
+        }; 
+        
+        this.createWorld();
+        
+        if(!game.device.desktop){
+            this.addMobileInput();
+        }
+        
         this.player = game.add.sprite(game.world.centerX,game.world.centerY,'player');
         this.player.anchor.setTo(0.5,0.5);
         game.physics.arcade.enable(this.player);
@@ -28,7 +43,7 @@ var playState = {
 
         game.global.score = 0;
         
-        this.createWorld();
+        
         this.nextEnemy = 0;
         
         this.jumpSound = game.add.audio('jump');
@@ -51,18 +66,7 @@ var playState = {
         this.scoreLabel = game.add.text(30,30,'score:0',{font: '16px "Press Start 2P"', fill: '#1e90d6'});
         this.lifeLabel = game.add.text(360,30,'Lives:'+this.player.lives ,{font: '16px "Press Start 2P"', fill: '#4ed35d'});
         
-        game.input.keyboard.addKeyCapture([Phaser.Keyboard.UP,Phaser.Keyboard.DOWN,Phaser.Keyboard.LEFT,Phaser.Keyboard.RIGHT,Phaser.Keyboard.SPACEBAR]);
-
-        this.wasd = {
-            up: game.input.keyboard.addKey(Phaser.Keyboard.W),
-            left: game.input.keyboard.addKey(Phaser.Keyboard.A),
-            right:game.input.keyboard.addKey(Phaser.Keyboard.D),
-            spaceBar:game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR),
-        }; 
         
-        if(!game.device.desktop){
-            this.addMobileInput();
-        }
     },
     
     update: function() {
@@ -89,11 +93,11 @@ var playState = {
 	},
     
     movePlayer: function() {
-		if (this.cursor.left.isDown || this.wasd.left.isDown || this.moveleft) {
+		if (this.cursor.left.isDown || this.wasd.left.isDown || this.moveLeft) {
 			this.player.body.velocity.x = -200;
             this.player.animations.play('left');
 		}
-		else if (this.cursor.right.isDown || this.wasd.right.isDown  || this.moveRight) {
+		else if (this.cursor.right.isDown || this.wasd.right.isDown || this.moveRight) {
 			this.player.body.velocity.x = 200;
             this.player.animations.play('right');
 		}
@@ -102,7 +106,7 @@ var playState = {
             this.player.animations.play('idle');
 		}
     
-		if (this.cursor.up.isDown || this.wasd.up.isDown || this.wasd.spaceBar.isDown) {
+		if (this.cursor.up.isDown || this.wasd.up.isDown || this.wasd.spaceBar.isDown || this.moveUp) {
             this.jumpPlayer();
 		}      
 	},
@@ -198,20 +202,19 @@ var playState = {
     addMobileInput: function(){
         this.jumpButton = game.add.sprite(350,247,'jumpButton');
         this.jumpButton.inputEnabled = true;
-        this.jumpButton.events.onInputDown.add(this.jumpPlayer,this);
-        this.jumpButton.events.onInputOver.add(this.jumpPlayer,this);
+        this.jumpButton.events.onInputOver.add(function(){this.moveUp=true;},this);
+        this.jumpButton.events.onInputOut.add(function(){this.moveUp=false;},this);
+        this.jumpButton.events.onInputDown.add(function(){this.moveUp=true;},this);
+        this.jumpButton.events.onInputUp.add(function(){this.moveUp=false;},this);
         this.jumpButton.alpha = 0.5;
         
-        this.moveLeft = false;
-        this.moveRight = false;
-
         this.leftButton = game.add.sprite(50,247,'leftButton');
         this.leftButton.inputEnabled = true;
         this.leftButton.events.onInputOver.add(function(){this.moveLeft=true;},this);
         this.leftButton.events.onInputOut.add(function(){this.moveLeft=false;},this);
         this.leftButton.events.onInputDown.add(function(){this.moveLeft=true;},this);
         this.leftButton.events.onInputUp.add(function(){this.moveLeft=false;},this);
-        this.leftButton.alpa = 0.5;
+        this.leftButton.alpha = 0.5;
         
         this.rightButton = game.add.sprite(130,247,'rightButton');
         this.rightButton.inputEnabled = true;
@@ -225,7 +228,7 @@ var playState = {
     },
     
     jumpPlayer: function(){
-        if(this.player.body.onFloor() && this.player.alive){
+        if(this.player.body.onFloor()){
             this.player.body.velocity.y=-260;
             this.player.jumpStarted = game.time.now;
             this.jumpSound.play();
