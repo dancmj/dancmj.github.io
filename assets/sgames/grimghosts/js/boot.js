@@ -1,6 +1,6 @@
 var bootState = {
     preload: function(){
-        game.load.image('progressBar','/assets/sgames/grimghost/progressBar.png');
+        game.load.image('progressBar','/assets/sgames/grimghost/assets/progressBar.png');
     },
     
     create: function(){
