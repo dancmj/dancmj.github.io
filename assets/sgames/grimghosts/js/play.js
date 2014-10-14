@@ -221,7 +221,7 @@ var playState = {
     },
     
     jumpPlayer: function(){
-        if(this.player.body.onFloor()){
+        if(this.player.body.onFloor() && this.player.alive){
             this.player.body.velocity.y=-260;
             this.player.jumpStarted = game.time.now;
             this.jumpSound.play();
