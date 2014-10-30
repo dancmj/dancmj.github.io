@@ -5,12 +5,24 @@
 
     <title>{% if page.title %}{{ site.title | append: " // "| append: page.title}}{% else %}{{ site.title }}{% endif %}</title>    
 	<meta name="description" content="{{ site.description }}">
+	
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    {% if page.js %}
+    <link rel="stylesheet" href="{{ "/css/codeTheme.css" | prepend: site.baseurl }}" type="text/css">
+	
+	{% if page.codeType %}
+			<script src="/assets/js/rainbow-custom.min.js"></script>
+	{% endif %}
+	
+	{% if page.js %}
     	{% for js in page.js do %}
         	<script src="/js/{{js}}"></script>
+    	{% endfor %}
+	{% endif %}
+    {% if page.jsLink %}
+    	{% for js in page.jsLink do %}
+        	<script src="{{js}}"></script>
     	{% endfor %}
 	{% endif %}
 
