@@ -198,9 +198,7 @@ jsLink: ["http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"]
 <h2>Bam!!</h2>
 <p> There it is, I hope someone finds this useful someday.<br>I will continue graph theory stuff next with my implementation of a Breadth-first search but it will take me a couple weeks since I'll be participating in the <a href="http://globalgamejam.org/">Global Game Jam</a> in Guadalajara, México with my friends Rami and Berry this Friday. My efforts this week will be 100% focused on creating games on Unity3D so I can be ready for the event, maybe I'll upload one or two of the games I make.</p>
 <p>This post's song is <a href="https://www.youtube.com/watch?v=tjms8l15_uM">Vuelve en la Mañana by Insite</a> directly from Mexicali, México.</p>
-<p><sup><sup>*Note! Most of the definition of a graph was quoted from Wikipedia, don't hate me!</sup></sup></p>
-
-
+<p class="note">**Note! Most of the definition of a graph was quoted from Wikipedia, don't hate me!</p>
 
 <script>
     var w = $("#CanvasSection1").width(),
@@ -296,6 +294,18 @@ jsLink: ["http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"]
         .attr("ry",7)
         .attr("class", "bg");
 
+//    svg.append("svg:defs").selectAll("marker")
+//        .data(["end"])
+//      .enter().append("svg:marker")    
+//        .attr("id", String)
+//        .attr("viewBox", "0 -5 10 10")
+//        .attr("refX", 20.5)
+//        .attr("refY", -2.04)
+//        .attr("markerWidth", 8)
+//        .attr("markerHeight", 8)
+//        .attr("orient", "auto")
+//      .append("svg:path")
+//        .attr("d", "M0,-7L12,0L0,7");
       //////////Arrows!!
     var path = svg.append("svg:g").selectAll("path")
         .data(force.links())
@@ -307,6 +317,22 @@ jsLink: ["http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"]
               }
               ,"marker-end": "url(#end)"
         }); //Append arrow.
+
+
+//    var linktext = svg.append("svg:g")
+//        .selectAll("g.linklabelholder")
+//        .data(force.links());
+//
+//        linktext.enter().append("g").attr("class", "linklabelholder")
+//         .append("text")
+//         .attr("class", "linklabel")
+//         .attr("x", "50")
+//         .attr("y", "-20")
+//         .append("textPath")
+//        .attr("xlink:href",function(d,i) { return "#linkId_" + i;})
+//         .text(function(d) { 
+//           return d.cost+ "["+d.min+","+d.flow+","+d.max+"]";  //+ "["+d.minFlow+","+d.flow+","d.maxFlow+"]";
+//         });
 
     var node = svg.selectAll(".node")
         .data(force.nodes())
