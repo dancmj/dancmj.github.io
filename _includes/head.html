@@ -12,12 +12,16 @@
     <link rel="stylesheet" href="{{ "/css/codeTheme.css" | prepend: site.baseurl }}" type="text/css">
 	
 	{% if page.codeType %}
-			<script src="/assets/js/rainbow-custom.min.js"></script>
-	{% endif %}
+        <script src="/assets/js/rainbow-custom.min.js"></script>
+        <script src="/assets/js/language/generic.js"></script>
+        {% for codeType in page.codeType do %}
+        <script src="/assets/js/language/{{codeType}}.js"></script>
+        {% endfor %}
+    {% endif %}
 	
 	{% if page.js %}
     	{% for js in page.js do %}
-        	<script src="/js/{{js}}"></script>
+        	<script src="/assets/js/{{js}}.js"></script>
     	{% endfor %}
 	{% endif %}
     {% if page.jsLink %}
