@@ -27,7 +27,8 @@ code{
     background: #0B1022; 
     border-radius: 7px;
     word-wrap: normal;
-    overflow: scroll
+    overflow: scroll;
+    color: #fff;
 }
 
 pre, code {
