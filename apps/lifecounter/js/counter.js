@@ -1,18 +1,21 @@
 $(function() {
-        $("body").click(function(e) {
-          switch(e.target.id){
-            case("PlayerOneBtnPlus"):
-              e.shiftKey ? document.getElementById("PlayerOneLife").innerHTML = parseInt(document.getElementById("PlayerOneLife").innerHTML) + 5 : document.getElementById("PlayerOneLife").innerHTML++;
-              break;
-            case("PlayerOneBtnMinus"):
-              e.shiftKey ? document.getElementById("PlayerOneLife").innerHTML = parseInt(document.getElementById("PlayerOneLife").innerHTML) - 5 : document.getElementById("PlayerOneLife").innerHTML--;
-              break;
-            case("PlayerTwoBtnPlus"):
-              e.shiftKey ? document.getElementById("PlayerTwoLife").innerHTML = parseInt(document.getElementById("PlayerTwoLife").innerHTML) + 5 : document.getElementById("PlayerTwoLife").innerHTML++;
-              break;
-            case("PlayerTwoBtnMinus"):
-              e.shiftKey ? document.getElementById("PlayerTwoLife").innerHTML = parseInt(document.getElementById("PlayerTwoLife").innerHTML) - 5 : document.getElementById("PlayerTwoLife").innerHTML--;
-              break;
-          }
+  var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) || false;
+  var p1Life = document.getElementById("PlayerOneLife");
+  var p2Life = document.getElementById("PlayerTwoLife");
+  $("body").on(isMobile ? 'touchend' : 'click',function(e) {
+    switch(e.target.id){
+        case("PlayerOneBtnPlus"):
+          p1Life.innerHTML = parseInt(p1Life.innerHTML) + (e.shiftKey ? 5 : 1);
+          break;
+        case("PlayerOneBtnMinus"):
+          p1Life.innerHTML = parseInt(p1Life.innerHTML) - (e.shiftKey ? 5 : 1);
+          break;
+        case("PlayerTwoBtnPlus"):
+          p2Life.innerHTML = parseInt(p2Life.innerHTML) + (e.shiftKey ? 5 : 1);
+          break;
+        case("PlayerTwoBtnMinus"):
+          p2Life.innerHTML = parseInt(p2Life.innerHTML) - (e.shiftKey ? 5 : 1);
+          break;
+      }
     });
 })
