@@ -75,16 +75,16 @@ jsLink: ["http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"]
     
     <li><h1>Edge</h1>
         <p>An edge may receive 6 variables as parameters and contains 8 variables:</p>
-<pre><code data-language="javascript">function Edge(source, sink, cost, flow, maxFlow, minFlow){
+<pre><code data-language="javascript">function Edge(source,sink,cost,flow,maxFlow,minFlow){
     this.source = source;
     this.sink = sink;
     this.cost = cost || 0;
-    this.flow = flow || 0;
-    this.maxFlow = (function(){ if(maxFlow == undefined || maxFlow === 0){ return Infinity; } else { return maxFlow;};})();
-    this.minFlow = (function(){ if(minFlow == undefined || minFlow &#60; 0){ return 0;} else { return minFlow;};})(); 
+    this.minFlow = !minFlow || minFlow < 0 ? 0 : minFlow;
+    this.maxFlow = !maxFlow ? Infinity : maxFlow < this.minFlow ? this.minFlow : maxFlow;
+    this.flow = !flow || flow < 0 ? 0 : flow > this.maxFlow ? this.maxFlow : flow;
     this.redge = null;
     this.fake = false;  
-    this.color = -1;     
+    this.color = -1;    
 };</code></pre>
         <ul>
             <li>
@@ -132,28 +132,28 @@ jsLink: ["http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"]
                         <p>The cost of going through this link. If no value is received it is set to a default value of <b>0</b>.</p>
                     </li>
                     <li>
-                        <pre class="single"><code data-language="javascript" > this.flow = flow || 0; </code></pre>
-                        <p>The number of units currently flowing through this edge, the total cost of going through the edge is relative to the current flow. The default value of this variable is <b>0</b>.</p>
-                    </li>
-                    <li>
-                        <pre class="single"><code data-language="javascript" > this.maxFlow = (function(){ if(maxFlow == undefined || maxFlow &lt;== 0){ return Infinity; } else { return maxFlow;};})(); </code></pre>
-                        <p>The flow limit is stored here. If no value is received or if the value received is lesser or equals 0, a default value of <b>Infinity</b> is set to the variable so that there won't be any problems with the algorithms.</p>
-                    </li>
-                    <li>
-                        <pre class="single"><code data-language="javascript" > this.minFlow = (function(){ if(minFlow == undefined || minFlow &#60; 0){ return 0;} else { return minFlow;};})(); </code></pre>
+                        <pre class="single"><code data-language="javascript" > this.minFlow = !minFlow || minFlow &lt; 0 ? 0 &#58; minFlow; </code></pre>
                         <p>The number of flow units that must travel through this edge, disregarding cost or anything else. If no value is set or the minimum flow is lesser than 0, a default value of <b>0</b> is set.</p>
                     </li>
                     <li>
+                        <pre class="single"><code data-language="javascript" > this.maxFlow = !maxFlow ? Infinity &#58; maxFlow &lt; this.minFlow ? this.minFlow &#58; maxFlow; </code></pre>
+                        <p>The edge's maximum flow limit is stored here. If the value received is undefined or equals 0, <b>Infinity</b> will be assigned and in case the value received is lesser than <code> minFlow </code>,  the value assigned will be equals to <code> minFlow </code>.</p>
+                    </li>
+                    <li>
+                        <pre class="single"><code data-language="javascript" > this.flow = !flow || flow &lt; 0 ? 0 &#58; flow &gt; this.maxFlow ? this.maxFlow &#58; flow; </code></pre>
+                        <p>The number of units currently flowing through this edge, the total cost of going through the edge is relative to the current flow. The default value of this variable is <b>0</b>. In case the value exceeds <code> maxFlow </code>, it will be set to the limit's value.</p>
+                    </li>
+                    <li>
                         <pre class="single"><code data-language="javascript" > this.redge = null; </code></pre>
-                        <p>Whenever an edge E = (x, y) is created, a new return-edge (redge) E' = (y, x) is created too and is pushed to node y's adjacents array. The purpose of this is to have a reference to every edge that is pointing to node y and to have an easy way of exploring a graph in case you need to do a directed or undirected search; In case of an directed search redges are simply ignored.</p>
+                        <p>Whenever an edge E = (x, y) is created, a new return&#45;edge (redge) E' = (y, x) is created too and is pushed to node y's adjacents array. The purpose of this is to have a reference to every edge that is pointing to node y and to have an easy way of exploring a graph in case you need to do a directed or undirected search; In case of an directed search redges are simply ignored.</p>
                     </li>
                     <li>
                         <pre class="single"><code data-language="javascript" > this.fake = false; </code></pre>
                         <p>If an edge's fake value is set to <b>true</b>, it means that it is a redge and will be ignored on directed graphs.</p>
                     </li>
                     <li>
-                        <pre class="single"><code data-language="javascript" > this.color = -1; </code></pre>
-                        <p>Finally, the color variable determines what edges do the algorithms consider on its search, be it a path or a tree. On a value of <b>-1</b> the edge won't be colored, else, its value will be <b>blue</b> and it will be colored when it is drawn.</p>
+                        <pre class="single"><code data-language="javascript" > this.color = &#45;1; </code></pre>
+                        <p>Finally, the color variable determines what edges do the algorithms consider on its search, be it a path or a tree. On a value of <b>&#45;1</b> the edge won't be colored, else, its value will be <b>blue</b> and it will be colored when it is drawn.</p>
                     </li>
                 </ul>
             </li>
