@@ -7,9 +7,9 @@ categories: phaser
 game: ["fbird"]
 ---
 
-<p>
+
 I made a simple phaser game, it is a clone of the game Flappy Bird. I learned this from <a href="http://www.lessmilk.com/">Thomas Palef</a> following his tutorials. I made it a little harder that the regular one, the 'bird' is a little heavier this time so be ready to tap the spacebar a lot!
-</p>
+
 <div id="gameDiv"></div>
 
-<p>I'll keep updating the game adding sprites, sounds, menu, etc. Before redoing this game on phaser I honestly had forgotten how simple and powerful the phaser framework was, I would recommend it to anyone. <a href="https://github.com/dancmj/dancmj.github.io/blob/master/assets/sgames/fbird/main.js">Here is the source code</a>.</p>
+I'll keep updating the game adding sprites, sounds, menu, etc. Before redoing this game on phaser I honestly had forgotten how simple and powerful the phaser framework was, I would recommend it to anyone. [Here is the source code](https://github.com/dancmj/dancmj.github.io/blob/master/assets/sgames/fbird/main.js)
