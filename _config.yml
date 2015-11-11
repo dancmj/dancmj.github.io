@@ -27,3 +27,7 @@ version:          2.0.0
 
 github:
   repo:           https://github.com/dancmj/dancmj.github.io
+
+# Plugins
+tag_page_layout:  tag_page
+tag_page_dir:     tag
