@@ -67,8 +67,10 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #268bd2;
+  position: relative;
+  color: #2a7ae2;
   text-decoration: none;
+
 }
 a strong {
   color: inherit;
@@ -76,13 +78,35 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #bdc3c7;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
-  font-weight: bold;
+  font-weight: 300;
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
@@ -330,13 +354,13 @@ tbody tr:nth-child(odd) th {
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 }
 
 /* Blog post or page title */
 .page-title,
 .post-title,
-.post-title a {
+.post-title {
   color: #303030;
 }
 .page-title,
@@ -348,7 +372,14 @@ tbody tr:nth-child(odd) th {
 .post-date {
   display: block;
   margin-top: -.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
+  color: #9a9a9a;
+}
+
+.post-meta {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 2rem;
   color: #9a9a9a;
 }
 

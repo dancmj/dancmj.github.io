@@ -1,5 +1,6 @@
 _drafts
 *.test.md
+test_posts/
 
 # Ignore docs files
 _gh_pages
