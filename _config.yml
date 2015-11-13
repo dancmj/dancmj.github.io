@@ -1,11 +1,11 @@
 name:               dancmj
-description:        Blogging about stuffs
+description:        HI, SORRY! THE SITE IS STILL ON CONSTRUCTION!
 meta_description:   "A place for my thoughts, games and projects"
 
 markdown:           redcarpet
 highlighter:        pygments
 logo:               false
-paginate:           15
+paginate:           5
 baseurl:            /
 domain_name:        'http://dancmj.github.io'
 google_analytics:   'UA-58503726-1'

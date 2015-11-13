@@ -6,8 +6,8 @@ archive: false
 post_class: post-template
 ---
 
-<header class="main-header post-head {% if page.cover %}" style="background-image: url(/assets/images/{{ page.cover }}.jpg) {%else%}no-cover{% endif %}">
-    <nav class="main-nav {% if page.cover %} overlay {% endif %} clearfix">
+<header class="main-header post-head {% if page.cover %}" style='background-image: url(/assets/images/posts/{{ page.cover }}.jpg);' {% elsif page.cover-link %}" style='background-image: url({{ page.cover-link }});' {%else%} no-cover"{% endif %}>
+    <nav class="main-nav {% if page.cover or page.cover-link %} overlay {% endif %} clearfix">
         <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Home</a>
         {% for node in site.pages %}
           {% if node.title and node.layout == 'page' %}

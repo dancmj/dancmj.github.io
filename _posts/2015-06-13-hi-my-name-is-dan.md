@@ -6,6 +6,7 @@ date:       2015-06-13 22:41:34
 categories: blog
 excerpt:    "Back to business, really."
 song:       vsTTXeD-J0k
+cover:      p2
 ---
 
 Time flies! So much has happened in the last 4 months, including new technologies, friends, music, achievements and goals.

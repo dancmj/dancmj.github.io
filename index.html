@@ -4,7 +4,7 @@ title: Home
 cover: bg
 ---
 
-<header class="main-header {% if page.cover %}" style="background-image: url(/assets/images/{{ page.cover }}.jpg) {%else%}no-cover{% endif %}">
+<header class="main-header index-header {% if page.cover %}" style="background-image: url(/assets/images/{{ page.cover }}.jpg); {%else%}no-cover{% endif %}">
     <nav class="main-nav overlay clearfix">
       {% if page.logo %}
         <a class="blog-logo" href="{{ site.baseurl }}">
@@ -25,38 +25,41 @@ cover: bg
             </h2>
         </div>
     </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="0"><span class="hidden">Scroll Down</span></a>
 </header>
 
 
 <main id="content" class="content" role="main">
-
 
     <div class="extra-pagination inner">
         {% include pagination.html %}
     </div>
 
     {% for post in paginator.posts %}
-    <article class="post">
-        <header class="post-header">
-            <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        </header>
-        <section class="post-excerpt">
-            {{ post.excerpt }} <a class="read-more" href="{{ post.url }}">&raquo;</a>
-        </section>
-        <footer class="post-meta">
-            {% if site.author %}
-                <img class="author-thumb" src="/assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
-                {{ site.author }}
-            {% endif %}
-            {% if post.categories.size > 0 %}
-                {{ post.categories | array_to_sentence_string | prepend: 'on ' }}
-            {% endif %}
-            <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
-                {{ post.date | date_to_string }}
-            </time>
-        </footer>
-    </article>
+    <section class="article-container {% if post.cover %}" style='background-image: url(/assets/images/posts/{{ post.cover }}.jpg);' {% elsif post.cover-link %}" style='background-image: url({{ post.cover-link }});' {%else%} no-cover"{% endif %}>
+      <div class="background-opacity">
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            </header>
+            <section class="post-excerpt">
+                {{ post.excerpt }} <a class="read-more" href="{{ post.url }}">&raquo;</a>
+            </section>
+            <footer class="post-meta">
+                {% if site.author %}
+                    <img class="author-thumb" src="/assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
+                    {{ site.author }}
+                {% endif %}
+                {% if post.categories.size > 0 %}
+                    {{ post.categories | array_to_sentence_string | prepend: 'on ' }}
+                {% endif %}
+                <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+                    {{ post.date | date_to_string }}
+                </time>
+            </footer>
+        </article>
+      </div>
+    </section>
     {% endfor %}
 
     {% include pagination.html %}

@@ -13,10 +13,13 @@
 	"syntax"
 ;
 
+///  Scroll Down Arrow
 .scroll-down {
     display: block;
 }
+/////////////////////
 
+/// site's buttons /////
 .nav-button {
 		margin-left: 5px;
 }
@@ -29,4 +32,58 @@
 .main-nav.overlay .nav-button {
     background: rgba(0, 0, 0, 0.35);
     border-color: transparent;
+}
+////////////////////////
+
+//// main header margin remove /////
+.index-header{
+	margin-bottom: 0rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .index-header{
+      margin-bottom: 0px;
+	}
+}
+//////////////////////////////////////////////
+///  Index Article Background stretcher.//////
+.article-container {
+	padding:1 1 1 1em;
+	overflow:hidden;
+	background-color: #23201A;
+	background-size: cover;
+	background-size: cover;
+	-webkit-background-size:
+	cover;-moz-background-size:
+	cover;background-size: cover;
+	background-position: center center;
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-repeat: no-repeat;
+}
+//////////////////////////////////////////
+// Background Opacity layer/////////////
+
+.background-opacity {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2em 0;
+}
+
+.background-opacity article {
+	color: white;
+}
+/////////////////////////////////////
+
+
+a {
+	color: #6998c9;
+	text-decoration: none;
+}
+
+.post-title a{
+	color: white;
+}
+
+.post-title a:hover{
+	color: #95a5a6;
 }
