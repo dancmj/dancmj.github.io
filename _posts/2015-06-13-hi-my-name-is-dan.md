@@ -1,10 +1,11 @@
 ---
-layout: post
-title:  "himynameisdan"
-date:   2015-06-13 22:41:34
-excerpt: "Back to business, really."
+layout:     post
+title:      "himynameisdan"
+date:       2015-06-13 22:41:34
 
-song: vsTTXeD-J0k
+categories: blog
+excerpt:    "Back to business, really."
+song:       vsTTXeD-J0k
 ---
 
 Time flies! So much has happened in the last 4 months, including new technologies, friends, music, achievements and goals.
