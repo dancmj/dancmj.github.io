@@ -1,49 +1,89 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Let's add a comment to make this file sass-y.
+# Change this file for any custom CSS.
 ---
-@charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+/* We need to add display:inline in order to align the '>>' of the 'read more' link */
+.post-excerpt p {
+	display:inline;
 }
-
-
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+	"syntax"
 ;
+
+///  Scroll Down Arrow
+.scroll-down {
+    display: block;
+}
+/////////////////////
+
+/// site's buttons /////
+.nav-button {
+		margin-left: 5px;
+}
+
+.nav-button.active {
+	border-color: #bfc8cd;
+	color: #9EABB3;
+}
+
+.main-nav.overlay .nav-button {
+    background: rgba(0, 0, 0, 0.35);
+    border-color: transparent;
+}
+////////////////////////
+
+//// main header margin remove /////
+.index-header{
+	margin-bottom: 0rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .index-header{
+      margin-bottom: 0px;
+	}
+}
+//////////////////////////////////////////////
+///  Index Article Background stretcher.//////
+.article-container {
+	padding:1 1 1 1em;
+	overflow:hidden;
+	background-color: #23201A;
+	background-size: cover;
+	background-size: cover;
+	-webkit-background-size:
+	cover;-moz-background-size:
+	cover;background-size: cover;
+	background-position: center center;
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-repeat: no-repeat;
+}
+//////////////////////////////////////////
+// Background Opacity layer/////////////
+
+.background-opacity {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2em 0;
+}
+
+.background-opacity article {
+	color: white;
+}
+/////////////////////////////////////
+
+
+a {
+	color: #6998c9;
+	text-decoration: none;
+}
+
+.post-title a{
+	color: white;
+}
+
+.post-title a:hover{
+	color: #95a5a6;
+}

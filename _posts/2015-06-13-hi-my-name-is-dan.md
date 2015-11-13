@@ -1,9 +1,12 @@
 ---
-layout: post
-title:  "himynameisdan"
-date:   2015-06-13 22:41:34
-excerpt: "Back to business, really."
+layout:     post
+title:      "himynameisdan"
+date:       2015-06-13 22:41:34
+
 categories: blog
+excerpt:    "Back to business, really."
+song:       vsTTXeD-J0k
+cover:      p2
 ---
 
 Time flies! So much has happened in the last 4 months, including new technologies, friends, music, achievements and goals.
@@ -23,4 +26,4 @@ I'm finally starting to go back to my gaming side, I've been playing quite alot 
 ### What's next for me?
 Getting involved in alot of things with alot of people is a problem, I don't have the sufficient time to get involved as much as I'd like to so I end up not working on great projects. Still, things are looking up! I'm pretty happy with what I've accomplished even though it isn't that much. So working on making an alpha of the game is a priority right now, as well as implementing a pretty sweet angular onto this site.
 
-And a song for this post: [CHON - Suda](https://www.youtube.com/watch?v=vsTTXeD-J0k), smooth as butter.
+And a song for this post: **CHON - Suda**, smooth as butter.
