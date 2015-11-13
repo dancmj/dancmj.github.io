@@ -593,7 +593,7 @@ margin on the iframe, cause it breaks stuff. */
     margin-right: 8px;
 }
 
-.subscribe-button {
+.nav-button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -612,7 +612,7 @@ margin on the iframe, cause it breaks stuff. */
     background: rgba(0,0,0,0.1);
     transition: all ease 0.3s;
 }
-.subscribe-button:before {
+.nav-button:before {
     font-size: 9px;
     margin-right: 6px;
 }
@@ -632,7 +632,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .no-cover .main-nav.overlay,
 .no-cover .back-button,
-.no-cover .subscribe-button {
+.no-cover .nav-button {
     background: none;
 }
 
@@ -641,7 +641,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .main-nav.overlay .back-button,
-.main-nav.overlay .subscribe-button {
+.main-nav.overlay .nav-button {
     border-color: rgba(255,255,255,0.6);
 }
 
@@ -654,7 +654,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Add a border to the buttons on hover */
 .back-button:hover,
-.subscribe-button:hover {
+.nav-button:hover {
     border-color: #bfc8cd;
     color: #9EABB3;
 }
@@ -694,7 +694,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .no-cover .main-nav.overlay .back-button,
-.no-cover .main-nav.overlay .subscribe-button {
+.no-cover .main-nav.overlay .nav-button {
     color: rgba(0,0,0,0.4);
     border-color: rgba(0,0,0,0.3);
 }
@@ -1486,7 +1486,7 @@ body:not(.post-template) .post-title {
     }
 
     .back-button,
-    .subscribe-button {
+    .nav-button {
         height: 44px;
         line-height: 41px;
         border-radius: 0;
@@ -1494,7 +1494,7 @@ body:not(.post-template) .post-title {
         background: transparent;
     }
     .back-button:hover,
-    .subscribe-button:hover {
+    .nav-button:hover {
         border-color: #ebeef0;
         color: #2e2e2e;
         background: #ebeef0;
@@ -1504,7 +1504,7 @@ body:not(.post-template) .post-title {
         padding: 0 15px 0 10px;
     }
 
-    .subscribe-button {
+    .nav-button {
         padding: 0 12px;
     }
 
@@ -1518,12 +1518,12 @@ body:not(.post-template) .post-title {
         background: none;
     }
     .no-cover .main-nav.overlay .back-button,
-    .no-cover .main-nav.overlay .subscribe-button {
+    .no-cover .main-nav.overlay .nav-button {
         border: none;
     }
 
     .main-nav.overlay .back-button,
-    .main-nav.overlay .subscribe-button {
+    .main-nav.overlay .nav-button {
         border-color: transparent;
     }
 
