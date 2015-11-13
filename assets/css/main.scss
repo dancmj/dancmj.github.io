@@ -12,3 +12,16 @@
 @import
 	"syntax"
 ;
+
+.scroll-down {
+    display: block;
+}
+
+.nav-button {
+		margin-left: 5px;
+}
+
+.main-nav.overlay .nav-button {
+    background: rgba(0, 0, 0, 0.35);
+    border-color: transparent;
+}
