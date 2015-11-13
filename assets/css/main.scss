@@ -21,6 +21,11 @@
 		margin-left: 5px;
 }
 
+.nav-button.active {
+	border-color: #bfc8cd;
+	color: #9EABB3;
+}
+
 .main-nav.overlay .nav-button {
     background: rgba(0, 0, 0, 0.35);
     border-color: transparent;
