@@ -17,7 +17,7 @@ var greetings = [
   'Nanomachines, son',
   '!',
   // RTS
-  'Nuclear Launch Detected.',
+  'Nuclear launch detected.',
   'You must construct additional Pylons.',
   'We require more vespene gas.',
   'Somebody called for an exterminator?',
