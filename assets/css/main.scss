@@ -12,7 +12,15 @@
 @import
 	"syntax"
 ;
-
+/////////////////// import runescape font ////////////
+@font-face {
+    font-family: runefont;
+		src:url("../fonts/runefont.eot");
+    src:url("../fonts/runefont.eot?#iefix") format('embedded-opentype'),
+				url("../fonts/runefont.woff") format("woff"),
+				url("../fonts/runefont.ttf") format("truetype");
+}
+///////////////////////////////////
 ///  Scroll Down Arrow
 .scroll-down {
     display: block;
@@ -74,16 +82,72 @@
 }
 /////////////////////////////////////
 
-
+///////////LINK DECORATIONS post-title && page-title/////////
 a {
 	color: #6998c9;
 	text-decoration: none;
 }
 
-.post-title a{
+.post-title a, .page-title a{
 	color: white;
 }
 
-.post-title a:hover{
+.post-title a:hover, .page-title a:hover{
 	color: #95a5a6;
 }
+////////////////////////////////////////
+////////// page splash-message ///////////
+.page-description {
+	line-height: 0.8em;
+	font-weight: normal;
+	font-size: 3.2rem;
+	font-family: runefont;
+}
+
+#splash-text {
+	-webkit-animation: breathing 2s ease-out infinite normal;
+	animation: breathing 2s ease-out infinite normal;
+}
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+////////////////////////////////////////////////

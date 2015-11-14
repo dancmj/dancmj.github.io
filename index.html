@@ -4,8 +4,9 @@ title: Home
 cover: bg
 ---
 
-<header class="main-header index-header {% if page.cover %}" style="background-image: url(/assets/images/{{ page.cover }}.jpg); {%else%}no-cover{% endif %}">
+<header class="main-header index-header{% if page.cover %}" style="background-image: url(/assets/images/{{ page.cover }}.jpg);{% unless page.url == '/index.html'%} height: 65%;{% endunless %}{%else%} no-cover{% endif %}">
     <nav class="main-nav overlay clearfix">
+      {% unless page.url == "/index.html"%}<a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Front page</a>{% endunless %}
       {% if page.logo %}
         <a class="blog-logo" href="{{ site.baseurl }}">
             <img src="{{ page.logo }}" alt="Blog Logo" />
@@ -19,13 +20,19 @@ cover: bg
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">{{ site.name }}</h1>
-            <h2 class="page-description">
-                {% if site.description %} {{ site.description }}. {% endif %}
+            <h1 class="page-title">
+              {% unless page.url == "/index.html"%}<a href="{{ site.baseurl }}">{% endunless %}
+                {{ site.name }}
+              {% unless page.url == "/index.html"%}</a>{% endunless %}
+            </h1>
+            <h2 class="page-description{% if page.url == '/index.html' %}" id="splash-text"> {% else %}">
+              {{ site.description }} {% endif %}
             </h2>
         </div>
     </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="0"><span class="hidden">Scroll Down</span></a>
+    {% if page.url == "/index.html"%}
+      <a class="scroll-down icon-arrow-left" href="#content" data-offset="0"><span class="hidden">Scroll Down</span></a>
+    {% endif %}
 </header>
 
 

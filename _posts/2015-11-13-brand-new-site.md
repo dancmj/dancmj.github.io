@@ -8,7 +8,3 @@ excerpt:    and brand new goals.
 song:       HMnrl0tmd3k
 cover:      tj
 ---
-
-# SORRY
-
-It's almost 4am and I just wanted to upload this before falling asleep. I'll update the post tomorrow. Thanks!
