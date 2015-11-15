@@ -73,13 +73,13 @@
 // Background Opacity layer/////////////
 
 .background-opacity {
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.55);
   padding: 2em 0;
 	transition: all ease 0.3s;
 }
 
 .background-opacity:hover {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.35);
 	transition: all ease 0.3s;
 }
 
@@ -198,3 +198,44 @@ article.post:hover {
 }
 
 //////////////////////////////////
+//////// next / previous post //////
+
+.page-navigation-button {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	float: right;
+	height: 38px;
+	padding: 0 20px;
+	border: transparent 1px solid;
+	color: #9EABB3;
+	text-align: center;
+	font-size: 12px;
+	text-transform: uppercase;
+	line-height: 35px;
+	white-space: nowrap;
+	border-radius: 3px;
+	background: rgba(0,0,0,0.1);
+	transition: all ease 0.3s;
+}
+
+.page-navigation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.page-navigation a, .page-navigation div {
+  display: block;
+  width: 40%;
+  float: left;
+  margin: 1em 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#PageNavigatonSeparator {
+	width: 20%;
+}
+//////////////////////////

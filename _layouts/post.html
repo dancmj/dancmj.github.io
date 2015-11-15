@@ -8,7 +8,7 @@ post_class: post-template
 
 <header class="main-header post-head {% if page.cover %}" style='background-image: url(/assets/images/posts/{{ page.cover }}.jpg);' {% elsif page.cover-link %}" style='background-image: url({{ page.cover-link }});' {%else%} no-cover"{% endif %}>
     <nav class="main-nav {% if page.cover or page.cover-link %} overlay {% endif %} clearfix">
-        <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Home</a>
+        <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Back Home</a>
         {% for node in site.pages %}
           {% if node.title and node.layout == 'page' %}
             <a class="nav-button{% if page.url == node.url %} active{% endif %}" href='{{ node.url }}'> {{ node.title }} </a>
@@ -71,6 +71,20 @@ post_class: post-template
 
             <!-- Share links section -->
             {% include share.html %}
+
+            <div class="page-navigation">
+              {% if page.previous.url %}
+                <a class="prev page-navigation-button" href="{{page.previous.url}}"><i class="fa fa-chevron-left"></i> {{page.previous.title}}</a>
+              {% else %}
+                <div class="prev"></div>
+              {% endif %}
+              <div id="PageNavigatonSeparator"></div>
+              {% if page.next.url %}
+                <a class="next page-navigation-button" href="{{page.next.url}}">{{page.next.title}} <i class="fa fa-chevron-right"></i></a>
+              {% else %}
+                <div class="next"></div>
+              {% endif %}
+            </div>
 
             <!-- Disqus comments -->
             {% if page.disqus and jekyll.environment == 'production' %}
