@@ -120,6 +120,7 @@ a {
 #splash-text {
 	-webkit-animation: breathing 2s ease-out infinite normal;
 	animation: breathing 2s ease-out infinite normal;
+	cursor: default;
 }
 
 @-webkit-keyframes breathing {

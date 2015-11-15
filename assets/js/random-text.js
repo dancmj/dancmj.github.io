@@ -52,6 +52,10 @@ var greetings = [
   'Iron from ice!'
 ];
 
-$('#splash-text').append(function(){
-  return greetings[Math.floor(Math.random() * greetings.length)];;
+var getRandomGreeting = function() {
+  return greetings[Math.floor(Math.random() * greetings.length)];
+};
+
+$('#splash-text').append(getRandomGreeting).click(function() {
+  $('#splash-text').html(getRandomGreeting);
 });
