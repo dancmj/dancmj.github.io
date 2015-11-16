@@ -218,13 +218,17 @@ article.post:hover {
 	border-radius: 3px;
 	background: rgba(0,0,0,0.1);
 	transition: all ease 0.3s;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .page-navigation {
   font-size: 14px;
   display: block;
   width: auto;
-  overflow: hidden;
+	overflow: hidden;
+	white-space: nowrap; /* Don't forget this one */
+	text-overflow: ellipsis;
 }
 
 .page-navigation a, .page-navigation div {

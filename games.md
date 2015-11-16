@@ -4,4 +4,4 @@ title:  games
 cover:  bg
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+Hi, this part of the website is still on construction. Please come back later!
