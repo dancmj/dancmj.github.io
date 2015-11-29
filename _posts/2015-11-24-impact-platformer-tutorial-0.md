@@ -1,6 +1,6 @@
 ---
 layout:     tutorial
-title:      "Tutorial: Platformer game using Impact++ | Part 1"
+title:      "Tutorial: Platformer game using Impact++ | Intro"
 date:       "2015-11-24"
 
 categories: [Tutorials, ImpactJS]

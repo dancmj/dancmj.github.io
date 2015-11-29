@@ -10,6 +10,7 @@ var greetings = [
   // RS
   '<span style="color: yellow">Free armor trimming!</span>',
   '<span style="color: yellow">buying gf</span>',
+  '<span style="color: yellow">selling rune scimmy 32k</span>',
   '<span style="color: yellow">Examine</span> Dranyx1 <span style="color: yellow">(level-3)</span>',
   // MGS
   'La Li Lu Le Lo',
@@ -49,6 +50,7 @@ var greetings = [
   'VVVVVV',
   'All your base are belong to us',
   'C-c-c-combo breaker!',
+  'Act your age, Joanna',
   'I used to be an adventurer like you...',
   'Boomshakalaka!',
   'You\'re not a nice person, are you?',

@@ -2,7 +2,6 @@
 layout: default
 disqus: true
 
-archive: false
 post_class: post-template
 ---
 
@@ -34,12 +33,28 @@ post_class: post-template
 
         <section class="post-content">
             {{content}}
-            {% if page.song %}
-              <div class="videoWrapper">
-                <iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/{{ page.song }}" width="560"></iframe>
-              </div>
-            {% endif %}
         </section>
+
+        <div class="page-navigation">
+          {% assign previous_post = page.part | minus:1 %}
+          {% assign next_post = page.part | plus:1 %}
+
+          {% if page.part == 0 %}
+            <div class="prev"></div>
+          {% else %}
+            {% for post in site.posts %}{% if post.game == page.game and post.part == previous_post %}
+              {% if post.part == 0 %}
+                <a class="prev page-navigation-button" href="{{post.url}}"><i class="fa fa-chevron-left"></i>&nbsp;Introduction</a>
+              {% else %}
+                <a class="prev page-navigation-button" href="{{post.url}}"><i class="fa fa-chevron-left"></i>&nbsp;Part {{previous_post}} </a>
+              {% endif %}
+            {% endif %}{% endfor %}
+          {% endif %}
+          <div id="PageNavigatonSeparator"></div>
+          {% for post in site.posts %}{% if post.game == page.game and post.part == next_post %}
+            <a class="next page-navigation-button" href="{{page.next.url}}">Part {{next_post}}&nbsp;<i class="fa fa-chevron-right"></i></a>
+          {% endif %}{% endfor %}
+        </div>
 
         <footer class="post-footer">
             <!-- If we want to display author's name and bio -->
