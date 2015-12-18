@@ -29,11 +29,12 @@
     {{ content }}
     <footer class="site-footer clearfix">
       <section class="copyright">
-        <a href="{{ site.baseurl }}">{{ site.name }}</a> &copy;
+        <a href="https://github.com/{{ site.github_username }}">{{ site.name }}</a> &copy;
               {{date format="YYYY"}} &bull; All rights reserved.
       </section>
       <section class="poweredby">Made with Jekyll using
         <a href="http://github.com/rosario/kasper">Kasper theme</a>
+
       </section>
     </footer>
 
@@ -57,6 +58,8 @@
         })();
 
       </script>
+    {% else %}
+      <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     {% endif %}
 </body>
 </html>
