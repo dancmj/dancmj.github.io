@@ -10,7 +10,9 @@ If you wish to use my blog's source code as a base to make your own blog:
  * Open your terminal on the directory and:
  * Run `jekyll serve` and bam! The blog is running locally.
  * Now have fun with it!
+
 _____
+
 ## License
 
 Open sourced under the [MIT license](LICENSE.txt).
