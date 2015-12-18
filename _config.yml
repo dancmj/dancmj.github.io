@@ -2,6 +2,9 @@ name:               dancmj
 description:        hi, my name is dan and this is my blog!
 meta_description:   A place for my thoughts, games and projects.
 
+github_username:    dancmj
+twitter_username:   dan_cmj
+
 markdown:           redcarpet
 highlighter:        pygments
 logo:               false
