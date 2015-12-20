@@ -41,7 +41,17 @@
     <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="/assets/js/index.js"></script>
-    {% if page.url == "/index.html" %}<script type="text/javascript" src="/assets/js/random-text.js"></script>{% endif %}
+    {% if page.url == "/index.html" %}
+    <script type="text/javascript" src="/assets/js/particles.min.js"></script>
+    <script type="text/javascript" src="/assets/js/random-text.js"></script>
+    <script type="text/javascript">
+      var d = new Date();
+      if (d.getMonth() == '11') {
+        $('#header').attr('id', 'snow-header');
+        particlesJS.load('snow-header', '/assets/js/snow.js', function(){console.log('Happy Holidays!')});
+      }
+    </script>
+    {% endif %}
 
     {% if jekyll.environment == "production" %}
       <!-- Google Analytics Tracking code -->

@@ -7,6 +7,7 @@ var greetings = [
   '<span style="color: yellow">>></span> Only detail what you can do well! <span style="color: yellow"><<</span>',
   '<span style="color: yellow">>></span> Make players feel in control of their experience <span style="color: yellow"><<</span>',
   '<span style="color: yellow">>></span> Don\'t think about the goal, think about reasons to achieve it <span style="color: yellow"><<</span>',
+  '<span style="color: yellow">>></span> Dynamic change is always interesting! <span style="color: yellow"><<</span>',
   // RS
   '<span style="color: yellow">Free armor trimming!</span>',
   '<span style="color: yellow">buying gf</span>',
@@ -27,6 +28,8 @@ var greetings = [
   '<span style="color: blue">Wololo</span>',
   'Start the game already!',
   'how do you turn this on?',
+  'My life for Aiur',
+  'Power overwhelming',
   // Nintendo
   'Stay fresh!',
   'Our princess is in another castle!',
@@ -46,6 +49,9 @@ var greetings = [
   'Send me out, with a bang',
   'Don\'t make a girl a promise, if you know you can\'t keep it.',
   'Remember, no Russian.',
+  'Dont let your dreams be dreams',
+  'GET OVER HERE!',
+  'For England - James',
   // 'It is a good life we lead, brother. - The best. May it never change. - And may it never change us.',
   'VVVVVV',
   'All your base are belong to us',

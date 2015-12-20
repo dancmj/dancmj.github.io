@@ -243,7 +243,7 @@ article.post:hover {
 	width: 20%;
 }
 //////////////////////////
-
+///////////post-images
 .post-content .full-img {
 	max-width: 70%;
 	margin: 0 auto;
@@ -253,4 +253,19 @@ article.post:hover {
 	.post-content .full-img {
 		max-width: 100%;
 	}
+}
+
+/////////////////
+///////snow.js
+#snow-header *{
+  z-index: 1;
+}
+
+
+#snow-header canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 0;
 }
