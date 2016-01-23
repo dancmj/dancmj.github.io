@@ -8,6 +8,8 @@ var greetings = [
   '<span style="color: yellow">>></span> Make players feel in control of their experience <span style="color: yellow"><<</span>',
   '<span style="color: yellow">>></span> Don\'t think about the goal, think about reasons to achieve it <span style="color: yellow"><<</span>',
   '<span style="color: yellow">>></span> Dynamic change is always interesting! <span style="color: yellow"><<</span>',
+  '<span style="color: yellow">>></span> You don\'t play chess to win every time! <span style="color: yellow"><<</span>',
+  '<span style="color: yellow">>></span> Money isn\'t your goal! <span style="color: yellow"><<</span>',
   // RS
   '<span style="color: yellow">Free armor trimming!</span>',
   '<span style="color: yellow">buying gf</span>',
@@ -60,7 +62,10 @@ var greetings = [
   'I used to be an adventurer like you...',
   'Boomshakalaka!',
   'You\'re not a nice person, are you?',
-  'Iron from ice!'
+  'Iron from ice!',
+  'DRAKE!',
+  '"So you can grant him any wish, huh?" - "...To try, at least."',
+  'Her name was River.'
 ];
 
 var getRandomGreeting = function() {

@@ -42,8 +42,8 @@
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="/assets/js/index.js"></script>
     {% if page.url == "/index.html" %}
-    <script type="text/javascript" src="/assets/js/particles.min.js"></script>
     <script type="text/javascript" src="/assets/js/random-text.js"></script>
+    <script type="text/javascript" src="/assets/js/particles.min.js"></script>
     <script type="text/javascript">
       var d = new Date();
       if (d.getMonth() == '11') {
@@ -51,6 +51,8 @@
         particlesJS.load('snow-header', '/assets/js/snow.js', function(){console.log('Happy Holidays!')});
       }
     </script>
+    {% elsif page.demo %}
+    <script type="text/javascript" src="/assets/js/demos/{{ page.demo }}/{{ page.date| date: "%Y-%m-%d" }}.js"></script>
     {% endif %}
 
     {% if jekyll.environment == "production" %}
