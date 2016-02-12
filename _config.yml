@@ -6,7 +6,7 @@ github_username:    dancmj
 twitter_username:   dan_cmj
 email:              hello@dancmj.net
 
-markdown:           redcarpet
+markdown:           kramdown
 highlighter:        pygments
 logo:               false
 paginate:           5
