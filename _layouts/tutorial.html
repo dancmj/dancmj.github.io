@@ -91,10 +91,9 @@ post_class: post-template
             </div>
 
             <!-- Disqus comments -->
-            {% if page.disqus and jekyll.environment == 'production' %}
+            {% if layout.disqus and jekyll.environment == 'production' %}
                 {% include disqus.html %}
             {% endif %}
-
         </footer>
     </article>
 </main>

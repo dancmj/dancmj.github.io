@@ -16,9 +16,9 @@ cover: bg
 Check out the source code here, fork it, clone it, whatever! Be happy!:
 https://github.com/dancmj/dancmj.github.io
 -->
-<header id="header" class="main-header index-header{% if page.cover %}" style="background-image: url(/assets/images/{{ page.cover }}.jpg);{% unless page.url == '/index.html'%} height: 65%;{% endunless %}{%else%} no-cover{% endif %}">
+<header id="header" class="main-header index-header{% if page.cover %}" style="background-image: url(/assets/images/{{ page.cover }}.jpg);{% unless page.url == '/'%} height: 65%;{% endunless %}{%else%} no-cover{% endif %}">
     <nav class="main-nav overlay clearfix">
-      {% unless page.url == "/index.html"%}<a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Front page</a>{% endunless %}
+      {% unless page.url == "/"%}<a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Front page</a>{% endunless %}
       {% if page.logo %}
         <a class="blog-logo" href="{{ site.baseurl }}">
             <img src="{{ page.logo }}" alt="Blog Logo" />
@@ -33,16 +33,16 @@ https://github.com/dancmj/dancmj.github.io
     <div class="vertical">
         <div class="main-header-content inner">
             <h1 class="page-title">
-              {% unless page.url == "/index.html"%}<a href="{{ site.baseurl }}">{% endunless %}
+              {% unless page.url == "/"%}<a href="{{ site.baseurl }}">{% endunless %}
                 {{ site.name }}
-              {% unless page.url == "/index.html"%}</a>{% endunless %}
+              {% unless page.url == "/"%}</a>{% endunless %}
             </h1>
-            <h2 class="page-description{% if page.url == '/index.html' %}" id="splash-text"> {% else %}">
+            <h2 class="page-description{% if page.url == '/' %}" id="splash-text"> {% else %}">
               {{ site.description }} {% endif %}
             </h2>
         </div>
     </div>
-    {% if page.url == "/index.html"%}
+    {% if page.url == "/"%}
       <a class="scroll-down icon-arrow-left" href="#content" data-offset="0"><span class="hidden">Scroll Down</span></a>
     {% endif %}
 </header>

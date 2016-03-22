@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "i love pizza"
+title:      i love pizza
 date:       2016-01-23
 
 categories: blog

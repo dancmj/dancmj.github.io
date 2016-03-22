@@ -73,7 +73,6 @@ We're done with the file setup, now let's modify your `lib/game/main.js` file so
 
 Open your `main.js` file and modify it so it looks like this:
 
-{% gist 0def7241ac70e7ebf625 %}
 
 As you can see, the changes are simple:
 
