@@ -7,7 +7,7 @@ twitter_username : dan_cmj
 email            : hello@dancmj.net
 
 markdown         : kramdown
-highlighter      : pygments
+highlighter      : rouge
 logo             : false
 paginate         : 5
 baseurl          : /
