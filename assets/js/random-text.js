@@ -42,6 +42,11 @@ var greetings = [
   'B A R R A L',
   'I AM ERROR',
   'Whenever there is a meeting, a parting is sure to follow',
+  // LIS
+  'This is my storm... I caused this... I caused all of this.',
+  'With great power comes great bullshit',
+  'Wowser',
+  'NO EMOJI',
   // Other
   'getRandomGreeting()',
   'I D D Q D',
@@ -65,6 +70,7 @@ var greetings = [
   'Iron from ice!',
   'DRAKE!',
   '"So you can grant him any wish, huh?" - "...To try, at least."',
+  //
   'Her name was River.'
 ];
 

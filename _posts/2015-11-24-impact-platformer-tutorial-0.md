@@ -27,6 +27,7 @@ After a long debate with myself on deciding which engine should I use to start m
 Okay so that's enough explanations! Let's start.
 
 ## Perfect Ghosts
+
 ### Overview
 We'll be creating a simple platformer game using Impact++ called *Perfect Ghosts*. The player takes control of a woman called *Lua* exploring an abandoned section of the universe which is plagued by Spectrals. The player has to shoot and destroy every Spectral in the current room to reach the next one. Each room can have special properties and layouts. In the final room the player defeats the final boss and game over! Simple! These features should cover up a lot of stuff that's possible using Impact.
 

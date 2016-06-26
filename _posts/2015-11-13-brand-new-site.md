@@ -33,6 +33,7 @@ I bought many others but those three were the ones that caught my attention, add
 So, I've been asking questions to many developers and played [Cross-Code](http://www.cross-code.com/). I've decided to buy a license to use the [ImpactJS](http://impactjs.com/) on all of my future games for HTML. It's just unbelievable the kind of quality that is seen on those games and they're made on JS for the web! I've making games on [Phaser](http://phaser.io/) but I'm still not convinced enough to use it on a big project. I'll be working on them soon!
 
 ----------
+
 ## What's new with the blog?
 Apart from regular blog posts, I'll now use it to host my developer diaries for any apps and games I make and create tutorials for any kind of stuff I come up with, be it how to create *x* kind of game or how to use *y* framework, I'm really excited! This'll help me remember some complicated stuff on the future and hopefully contribute to the internet which has helped me with everything I know.
 
