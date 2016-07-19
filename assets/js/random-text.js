@@ -47,6 +47,15 @@ var greetings = [
   'With great power comes great bullshit',
   'Wowser',
   'NO EMOJI',
+  //Halo!
+  'Don\'t make a girl a promise, if you know you can\'t keep it.',
+  'If they came to hear me beg, they\'ll be disappointed.',
+  'Were it so easy.',
+  // Antichamber
+  'Every journey is a series of choices. The first is to begin the journey.',
+  'Patience has its own rewards.',
+  'Some choices leave us running around a lot without really getting anywhere.',
+  'The choice doesn\'t matter if the outcome is the same.',
   // Other
   'getRandomGreeting()',
   'I D D Q D',
@@ -54,7 +63,6 @@ var greetings = [
   'And all the cake is gone. You don\'t even care, do you?',
   'More questions? Splendid. I will be happy to assist you!',
   'Send me out, with a bang',
-  'Don\'t make a girl a promise, if you know you can\'t keep it.',
   'Remember, no Russian.',
   'Dont let your dreams be dreams',
   'GET OVER HERE!',
