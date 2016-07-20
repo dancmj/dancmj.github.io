@@ -278,3 +278,24 @@ article.post:hover {
 .page-description::-moz-selection {
   background: rgba(0,0,0,0.09);
 }
+
+////
+.main-header-cover-source {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  max-width: 30%;
+  a {
+    color: #ecf0f1;
+  }
+
+  a:hover {
+    color: #bdc3c7;
+  }
+  display: block;
+  position: absolute;
+  z-index: 100;
+  bottom: 10px;
+  right: 20px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+}

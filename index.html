@@ -1,9 +1,11 @@
 ---
 layout: default
 title: Home
+
 cover: bg
+cover_source:  http://andreewallin.deviantart.com/art/Rain-341210634
+cover_credits: Rain by AndreeWallin
 ---
-<!-- TODO: Add source to BG image. http://andreewallin.deviantart.com/art/Rain-341210634 -->
 <!--
      _                            _
     | |                          (_)
@@ -45,6 +47,11 @@ https://github.com/dancmj/dancmj.github.io
     </div>
     {% if page.url == "/"%}
       <a class="scroll-down icon-arrow-left" href="#content" data-offset="0"><span class="hidden">Scroll Down</span></a>
+    {% endif %}
+    {% if page.cover_source %}
+      <div class="main-header-cover-source">
+        <a href="{{page.cover_source}}">{{page.cover_credits}}</a>
+      </div>
     {% endif %}
 </header>
 
