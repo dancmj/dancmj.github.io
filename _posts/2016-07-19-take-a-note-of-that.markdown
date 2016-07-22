@@ -11,7 +11,7 @@ cover:      rs
 
 <br>
 
-## I'm scared if being a dissapointment
+## I'm scared of being a dissapointment
 
 I hope to someday overcome my mild case of Impostor Syndrome. The more I try learn stuff, so it happens that I also learn how much stuff I do not know or understand, so I'm less likely to actually do stuff. Ironically, I **know** that the only way to actually accomplish something is to "Fail often and fail fast" or "*[JUST DO IT](https://www.youtube.com/watch?v=ZXsQAXx_ao0)*" but I just can't seem to overcome my fear of starting out and being wrong about everything. I admit it, I just can't get that out of my head, I know the only way to get good at something is to start doing it, but I can't! I'm scared to fail, I'm scared to be a HUGE disappointment! A lot of people tell me "You'll do good, trust me". I trust you guys, I just don't trust myself with such a huge responsibility of being successful. How can I be good at something with this kind of stuff in my head? I keep stressing about that.
 
