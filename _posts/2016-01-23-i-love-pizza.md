@@ -23,7 +23,7 @@ Some [months ago I was working on this project](http://dancmj.github.io/blog/201
 
 As you see, it's still a work in progress! Missing features include tags for the node's name, highlighting for routes and step by step messages for every algorithm.
 
-####In other news...
+#### In other news...
 I spent 1 hour trying to configure my `gulpfile.js` and eventually gave up, but I finished with a colored Nyan reporter again so I'm quite happy!
 ![alt text](/assets/images/other/nyan.png "Color nyan!")
 
@@ -45,9 +45,6 @@ I have a 12 day streak right now on [duolingo](https://www.duolingo.com/) doing 
 This was a pretty short post now that I see it. Maybe next month I'll be writing on it once a week so it keeps growing and I don't have to write it all down on a single friday night.
 
 --------------
-
-## inish?! wtf?
-Okay I just noticed whenever I write `finish` it gets rendered as finish. Seriously I'm not making this up. You can do a `⌘+F` / `Ctrl + F` and look for it. It'll highlight everything that says finish but you can't see the F. Lol.
 
 ## Life and other things
 Things are going ok. I hope I can write some music soon. I tried hard yesterday but couldn't quite get any of it done, I wish it was as easy as programming. I'll get it someday I guess. Progress is slow, but steady. I'm trying to work on as many things as I can! I'm getting things done, they won't get done by themselves.
