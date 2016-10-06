@@ -1,18 +1,21 @@
 var greetings = [
   'hi, my name is dan',
   // Game Advice
-  '<span style="color: yellow">>></span> Fail to succeed <span style="color: yellow"><<</span>',
-  '<span style="color: yellow">>></span> Surprise is the secret ingredient of FUN! <span style="color: yellow"><<</span>',
-  '<span style="color: yellow">>></span> Love what you do <span style="color: yellow"><<</span>',
-  '<span style="color: yellow">>></span> Only detail what you can do well! <span style="color: yellow"><<</span>',
-  '<span style="color: yellow">>></span> Make players feel in control of their experience <span style="color: yellow"><<</span>',
-  '<span style="color: yellow">>></span> Don\'t think about the goal, think about reasons to achieve it <span style="color: yellow"><<</span>',
-  '<span style="color: yellow">>></span> Dynamic change is always interesting! <span style="color: yellow"><<</span>',
-  '<span style="color: yellow">>></span> You don\'t play chess to win every time! <span style="color: yellow"><<</span>',
-  '<span style="color: yellow">>></span> Money isn\'t your goal! <span style="color: yellow"><<</span>',
+  'Fail to succeed',
+  'Surprise is the secret ingredient of FUN!',
+  'Love what you do',
+  'Only detail what you can do well!',
+  'Make players feel in control of their experience',
+  'Don\'t think about the goal, think about reasons to achieve it',
+  'Dynamic change is always interesting!',
+  'You don\'t play chess to win every time!',
+  'Money isn\'t your goal!',
+  'Luck is what happens when preparation meets opportunity',
   // RS
   '<span style="color: yellow">Free armor trimming!</span>',
   '<span style="color: yellow">buying gf</span>',
+  '<span style="color: yellow">A q p</span>',
+  '<span style="color: yellow">. W</span>',
   '<span style="color: yellow">selling rune scimmy 32k</span>',
   '<span style="color: yellow">Examine</span> Dranyx1 <span style="color: yellow">(level-3)</span>',
   // MGS
@@ -78,6 +81,7 @@ var greetings = [
   'Iron from ice!',
   'DRAKE!',
   '"So you can grant him any wish, huh?" - "...To try, at least."',
+  'MAKING GAMES IS HARD',
   //
   'Her name was River.'
 ];
@@ -85,6 +89,8 @@ var greetings = [
 var getRandomGreeting = function() {
   return greetings[Math.floor(Math.random() * greetings.length)];
 };
+
+var spashText = $('#splash-text');
 
 $('#splash-text').append(getRandomGreeting()).click(function() {
   $('#splash-text').html(getRandomGreeting());
