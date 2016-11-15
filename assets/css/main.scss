@@ -79,8 +79,8 @@
 }
 
 .background-opacity:hover {
-  background: rgba(0, 0, 0, 0.35);
-	transition: all ease 0.3s;
+  background: rgba(0, 0, 0, 0.15);
+	transition: all ease 0.4s;
 }
 
 .background-opacity article {
@@ -193,8 +193,8 @@ article.post {
 }
 
 article.post:hover {
-		border-bottom-color: #95a5a6;
-		transition: all ease 0.3s;
+  border-bottom-color: rgba(149,165,166, 0.1);
+	transition: all ease 0.7s;
 }
 
 //////////////////////////////////

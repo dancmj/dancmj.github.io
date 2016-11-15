@@ -11,6 +11,10 @@ var greetings = [
   'You don\'t play chess to win every time!',
   'Money isn\'t your goal!',
   'Luck is what happens when preparation meets opportunity',
+  'Experience is what you get when yoy didn\'t get what you wanted',
+  'When you\'re angry at someone, you just haven\'t given them enough time.',
+  'Be happy',
+  'You never know when your words will be the exact lifeline someone needs at their loneliest time.',
   // RS
   '<span style="color: yellow">Free armor trimming!</span>',
   '<span style="color: yellow">buying gf</span>',
