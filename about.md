@@ -1,26 +1,16 @@
 ---
 layout: page
-title: Who am I?
+title: About Me
 ---
 
-My name is Daniel Contreras Mejia and I live in the warm city of Hermosillo, located in México.
+My name is Daniel Contreras Mejia and I'm from the warm city of Hermosillo, located in México. I'm currently residing on the awesome city of Vancouver, BC. I speak fluent spanish, english and just a little bit of french.
 
 <!-- TODO: Add a picture or something here. -->
 
-This is my blog! I work hard on it and try my best to make it look awesome and keep it relevant.
+This is my blog. I tend to write about whatever endeavor I take and my personal life. I love writing about my learnings, sharing my knowledge, computer science, discussing games and helping other people achieve their own dreams.
 
-## Here is some of the stuff I love doing:
+I worked as a developer and also as a QA Automation Engineer at Nearsoft, Inc. in México for almost two years. I left that job to pursue my dream of becoming a Game Designer and so far my first step has been to get a degree from the Vancouver Film School which I'm currently working on.
 
-* Full-stack Web Developing at [Born Co](http://www.madebyborn.co/).
-* Designing video games, that's my passion.
-* QA Automation Engineer at [Nearsoft Inc](http://nearsoft.com/).
-* I sometimes play bass on my local pubs and I used to play on [this awesome band](https://www.youtube.com/watch?v=P--VTcPKd9o)!
-* I'm trying to become a [composer too](https://soundcloud.com/dan_ce/sets/soundtrack)!
-* I LOVE computer science, data structures and graph theory. I'm making this awesome visualization tool called [g.raffe](https://github.com/dancmj/g.raffe). Check it out and contribute!
-* Watching live shows and performances with my friends.
-* I also code my own videogames. It's not my favorite part but it's a learning process so I love it!
-* And over everything else, I love playing videogames.
+So yeah! That's a little bit about me. Wanna hire me or just talk? Send me an email to <a href="mailto:{{site.email}}">hello@dancmj.net</a> or checkout my [LinkedIn](https://www.linkedin.com/in/dancmj) if you're more interested on my professional career.
 
-So yeah! That's a little bit about me. Wanna hire me or just talk? Send me an email to <a href="mailto:{{site.email}}">hello@dancmj.net</a>!
-
-Thanks for reading!
+Thanks for reading! Be happy.
