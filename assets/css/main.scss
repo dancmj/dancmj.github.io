@@ -1,301 +1,80 @@
 ---
-# Let's add a comment to make this file sass-y.
-# Change this file for any custom CSS.
 ---
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+@import 'font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic');
 
-/* We need to add display:inline in order to align the '>>' of the 'read more' link */
-.post-excerpt p {
-	display:inline;
-}
+/*
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-	"syntax"
-;
-/////////////////// import runescape font ////////////
-@font-face {
-    font-family: runefont;
-		src:url("../fonts/runefont.eot");
-    src:url("../fonts/runefont.eot?#iefix") format('embedded-opentype'),
-				url("../fonts/runefont.woff") format("woff"),
-				url("../fonts/runefont.ttf") format("truetype");
-}
-///////////////////////////////////
-///  Scroll Down Arrow
-.scroll-down {
-    display: block;
-}
-/////////////////////
+	@include skel-breakpoints((
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)',
+		xxsmall: '(max-width: 360px)'
+	));
 
-/// site's buttons /////
-.nav-button {
-		margin-left: 5px;
-}
+	@include skel-layout((
+		reset: 'full',
+		boxModel: 'border',
+		grid: ( gutters: 2em ),
+		breakpoints: (
+			large: (
+				grid: ( gutters: 1.5em )
+			),
+			small: (
+				grid: ( gutters: 1.25em )
+			)
+		)
+	));
 
-.nav-button.active {
-	border-color: #bfc8cd;
-	color: #9EABB3;
-}
+	@mixin inner {
+		> .inner {
+			@include padding(4em, 0);
+			margin: 0 auto;
+			max-width: _size(inner);
+			width: calc(100% - 6em);
 
-.main-nav.overlay .nav-button {
-    background: rgba(0, 0, 0, 0.35);
-    border-color: transparent;
-}
-////////////////////////
-
-//// main header margin remove /////
-.index-header{
-	margin-bottom: 0rem;
-}
-
-@media only screen and (max-width: 500px) {
-  .index-header{
-      margin-bottom: 0px;
+			@include breakpoint(small) {
+				@include padding(3em, 0);
+				width: calc(100% - 3em);
+			}
+		}
 	}
-}
-//////////////////////////////////////////////
-///  Index Article Background stretcher.//////
-.article-container {
-	padding:1 1 1 1em;
-	overflow:hidden;
-	background-color: #23201A;
-	background-size: cover;
-	background-size: cover;
-	-webkit-background-size:
-	cover;-moz-background-size:
-	cover;background-size: cover;
-	background-position: center center;
-	background-position-x: 50%;
-	background-position-y: 50%;
-	background-repeat: no-repeat;
-}
-//////////////////////////////////////////
-// Background Opacity layer/////////////
 
-.background-opacity {
-  background: rgba(0, 0, 0, 0.55);
-  padding: 2em 0;
-	transition: all ease 0.3s;
-}
+// Base.
 
-.background-opacity:hover {
-  background: rgba(0, 0, 0, 0.15);
-	transition: all ease 0.4s;
-}
+	@import 'base/page';
+	@import 'base/typography';
 
-.background-opacity article {
-	color: white;
-}
-/////////////////////////////////////
+// Component.
 
-///////////LINK DECORATIONS post-title && page-title/////////
-a {
-	color: #6998c9;
-	text-decoration: none;
-}
+	@import 'components/section';
+	@import 'components/form';
+	@import 'components/box';
+	@import 'components/icon';
+	@import 'components/image';
+	@import 'components/list';
+	@import 'components/table';
+	@import 'components/button';
+	@import 'components/tiles';
+	@import 'components/contact-method';
+	@import 'components/spotlights';
 
-.post-title a, .page-title a{
-	color: white;
-}
+// Layout.
 
-.post-title a:hover, .page-title a:hover{
-	color: #95a5a6;
-}
-
-.read-more {
-	color: #3498db;
-}
-.read-more:hover {
-	color: #2980b9;
-}
-////////////////////////////////////////
-////////// page splash-message ///////////
-.page-description {
-	line-height: 0.8em;
-	font-weight: normal;
-	font-size: 3.2rem;
-	font-family: runefont;
-}
-
-#splash-text {
-	-webkit-animation: breathing 2s ease-out infinite normal;
-	animation: breathing 2s ease-out infinite normal;
-	cursor: default;
-}
-
-@-webkit-keyframes breathing {
-  0% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-  25% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  60% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-  100% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-}
-
-@keyframes breathing {
-  0% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-  25% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-  60% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-  100% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-}
-////////////////////////////////////////////////
-/////////// videoWrapper //////
-.videoWrapper {
-	position: relative;
-	padding-bottom: 50%; /* 16:9 */
-	// padding-top: 25px;
-	height: 0;
-
-	iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-}
-//////////////////////////////////////////
-//////// post circle  ////////////
-
-.post:after {
-    display: none;
-}
-
-
-article.post {
-	transition: all ease 0.3s;
-}
-
-article.post:hover {
-  border-bottom-color: rgba(149,165,166, 0.1);
-	transition: all ease 0.7s;
-}
-
-//////////////////////////////////
-//////// next / previous post //////
-
-.page-navigation-button {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	display: inline-block;
-	float: right;
-	height: 38px;
-	padding: 0 20px;
-	border: transparent 1px solid;
-	color: #9EABB3;
-	text-align: center;
-	font-size: 12px;
-	text-transform: uppercase;
-	line-height: 35px;
-	white-space: nowrap;
-	border-radius: 3px;
-	background: rgba(0,0,0,0.1);
-	transition: all ease 0.3s;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.page-navigation {
-  font-size: 14px;
-  display: block;
-  width: auto;
-	overflow: hidden;
-	white-space: nowrap; /* Don't forget this one */
-	text-overflow: ellipsis;
-}
-
-.page-navigation a, .page-navigation div {
-  display: block;
-  width: 40%;
-  float: left;
-  margin: 1em 0;
-	font-family: 'Open Sans', sans-serif;
-}
-
-#PageNavigatonSeparator {
-	width: 20%;
-}
-//////////////////////////
-///////////post-images
-.post-content .full-img {
-	max-width: 70%;
-	margin: 0 auto;
-}
-
-@media only screen and (max-width: 500px) {
-	.post-content .full-img {
-		max-width: 100%;
-	}
-}
-
-/////////////////
-///////snow.js
-#snow-header *{
-  z-index: 1;
-}
-
-
-#snow-header canvas{
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.5;
-  z-index: 0;
-}
-
-/////
-
-.page-description::selection {
-  background: rgba(0,0,0,0.3);
-}
-.page-description::-moz-selection {
-  background: rgba(0,0,0,0.09);
-}
-
-////
-.main-header-cover-source {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 11px;
-  max-width: 30%;
-  a {
-    color: #ecf0f1;
-  }
-
-  a:hover {
-    color: #bdc3c7;
-  }
-  display: block;
-  position: absolute;
-  z-index: 100;
-  bottom: 10px;
-  right: 20px;
-  text-decoration: none;
-  color: rgba(255,255,255,0.7);
-}
+	@import 'layout/header';
+	@import 'layout/banner';
+	@import 'layout/main';
+	@import 'layout/contact';
+	@import 'layout/footer';
+	@import 'layout/wrapper';
+	@import 'layout/menu';
