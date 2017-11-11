@@ -1,36 +1,36 @@
 # site settings
-title: Forty
-subtitle: by HTML5 UP
-email: youremailaddress@gmail.com
-description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
-baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
-author:
-street_address: 1234 Somewhere Road
-city: Nashville
-state: TN
-zip_code: 55555
-country: United States of America
-phone: (716) 555-5555
+title               : dan
+subtitle          : cmj
+email             : hello@dancmj.net
+description       : Have a read on my thoughts and learnings. <br> The website is still being built, so <a href="/pf">check out my portfolio</a>.
+baseurl           : ''             # the subpath of your site, e.g. /blog
+url               : 'dancmj.net'  # the base hostname & protocol for your site
+author            : Daniel Contreras Mejia
+street_address    :
+city              : Vancouver
+state             : BC
+zip_code          :
+country           : Canada
+phone             : +52 1 (662) 180 3765
 
 # homepage tiles
-tiles-source: posts # accepts "posts" or "pages"
-tiles-count: 6
+tiles-source      : posts # accepts "posts" or "pages"
+tiles-count       : 6
 
 # social settings
-500px_url:
-facebook_url:
-github_url:
-gitlab_url: https://gitlab.com/u/andrewbanchich
-googleplus_url: https://plus.google.com/u/0/+AndrewBanchich
-instagram_url: https://instagram.com
-linkedin_url: https://www.linkedin.com/in/andrew-banchich-a4ba1195
-pinterest_url:
-slack_url:
-twitter_url: https://twitter.com/andrewbanchich
-
+500px_url         :
+facebook_url      :
+github_url        : https://github.com/dancmj
+gitlab_url        :
+googleplus_url    :
+instagram_url     : https://instagram.com/dancmj
+linkedin_url      : https://www.linkedin.com/in/dancmj
+pinterest_url     :
+slack_url         :
+twitter_url       : https://twitter.com/andrewbanchich
+google_analytics  : UA-58503726-1
 # build settings
-markdown: kramdown
+markdown          : kramdown
 
 sass:
-  style: compressed
+  style           : compressed
