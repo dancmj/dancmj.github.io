@@ -3,8 +3,8 @@ title               : dan
 subtitle          : cmj
 email             : hello@dancmj.net
 description       : Have a read on my thoughts and learnings. <br> The website is still being built, so <a href="/pf">check out my portfolio</a>.
-baseurl           : ''             # the subpath of your site, e.g. /blog
-url               : 'dancmj.net'  # the base hostname & protocol for your site
+baseurl           : /             # the subpath of your site, e.g. /blog
+url               : dancmj.net  # the base hostname & protocol for your site
 author            : Daniel Contreras Mejia
 street_address    :
 city              : Vancouver
