@@ -7,20 +7,29 @@
   <body>
     {% include header.html %}
 
-    <section id="banner" class="style7">
+    <section id="banner" class="">
+        <img style='position:relative;padding-bottom:54%' data-position="top center">
+          <iframe src='https://www.youtube.com/embed/bMzBBmdd1hU?version=3&loop=1&playlist=bMzBBmdd1hU&amp;rel=0&amp;controls=0&amp;autoplay=1&amp;showinfo=0&amp;mute=1' allow="autoplay; encrypted-media" frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0' allowfullscreen></iframe>
+        </img>
       <div class="inner">
-        <span class="image">
-            <img src="{{ site.baseurl }}/{{ page.image }}" alt="">
-        </span>
 
-        <header class="major">
+        <header class="content">
             <h1>{{ page.title }}</h1>
         </header>
 
         <div class="content">
-          <p>
-            Game Designer &amp; Systems Designer
+          <div id="small_banner">
+
+          <p style="color: #8395a7" >
+            Game <span style="color: #c8d6e5">Designer</span>
+            </br> Systems <span style="color: #c8d6e5">Designer</span>
+            <br> Level <span style="color: #c8d6e5">Designer</span>
+            <br> Gameplay <span style="color: #ff9f43">Programmer</span>
           </p>
+        </div>
+        </div>
+        <br>
+        <div>
           <ul class="actions">
             <li>
               <a href="/assets/dls/Daniel_Contreras_Resume.pdf" class="button icon fa-file-text-o">Résumé</a>
